@@ -16,10 +16,11 @@
 .production-item {
   position: relative;
   margin-right: 30px;
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
 }
-.production-item:nth-child(3n) {
-  margin-right: 0;
-}
+
 .production-text {
   position: absolute;
   bottom: 0;

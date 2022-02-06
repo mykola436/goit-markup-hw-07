@@ -25,13 +25,12 @@
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1);
   cursor: pointer;
-}
-
-.close-button:hover .close-icon {
-  fill: var(--accent-color-two);
-}
-.close-button:focus .close-icon {
-  fill: var(--accent-color-two);
+  &:hover,
+  &:focus {
+    .close-icon {
+      fill: var(--accent-color-two);
+    }
+  }
 }
 .close-icon {
   fill: #000000;
@@ -42,7 +41,6 @@
   visibility: hidden;
   pointer-events: none;
 }
-
 .form-head {
   display: block;
   margin-bottom: 12px;
@@ -78,11 +76,12 @@
   line-height: 1.17;
   letter-spacing: 0.01em;
   color: var(--paragraph-color);
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.form-field-input:focus {
-  border-color: var(--accent-color-two);
+  &:focus {
+    border-color: var(--accent-color-two);
+    & + .form-field-icon {
+      fill: var(--accent-color-two);
+    }
+  }
 }
 
 .form-field-icon {
@@ -94,9 +93,6 @@
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-field-input:focus + .form-field-icon {
-  fill: var(--accent-color-two);
-}
 .form-comment {
   width: 100%;
   height: 120px;
@@ -113,22 +109,24 @@
   color: var(--paragraph-color);
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   margin-bottom: 20px;
+  &::placeholder {
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+  }
+  &:focus {
+    border-color: var(--accent-color-two);
+  }
 }
-.form-comment::placeholder {
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.01em;
-  color: rgba(117, 117, 117, 0.5);
-}
-.form-comment:focus {
-  border-color: var(--accent-color-two);
-}
+
 .form-check {
   margin-bottom: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 .form-check-label {
   font-size: 14px;
   line-height: 1.71;
@@ -136,19 +134,31 @@
   display: flex;
   align-items: center;
   color: var(--paragraph-color);
-}
-
-.form-check-label > span {
-  width: 16px;
-  height: 15px;
-  border: 2px solid #2a2a2a;
-  border-radius: 2px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 7px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  cursor: pointer;
+  > span {
+    width: 16px;
+    height: 15px;
+    border: 2px solid #2a2a2a;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 7px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+  }
+  > a {
+    position: relative;
+    color: var(--accent-color-two);
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 2px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: var(--accent-color-two);
+    }
+  }
 }
 
 .check-icon {
@@ -157,48 +167,21 @@
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-check-input:checked + .form-check-label > span {
-  border: none;
-  background-color: var(--accent-color-two);
-}
-.form-check-input:checked + .form-check-label .check-icon {
-  fill: var(--icon-color-two);
-}
-
-.form-check-label > a {
-  position: relative;
-  color: var(--accent-color-two);
-}
-
-.form-check-label > a::after {
-  content: "";
-  position: absolute;
-  bottom: 2px;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  background-color: var(--accent-color-two);
+.form-check-input:checked {
+  & + .form-check-label {
+    > span {
+      border: none;
+      background-color: var(--accent-color-two);
+    }
+    .check-icon {
+      fill: var(--icon-color-two);
+    }
+  }
 }
 
 .form-btn {
-  display: block;
   margin: 0 auto;
   padding: 10px 55px;
-  background: #2196f3;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 1.87;
   display: flex;
   align-items: center;
-  text-align: center;
-  letter-spacing: 0.06em;
-  color: var(--button-text-color);
-  border-style: none;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.form-btn:hover,
-.form-btn:focus {
-  background-color: var(--button-accent-bckgrnd);
 }
