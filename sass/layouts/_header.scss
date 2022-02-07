@@ -2,7 +2,7 @@
   background-color: var(--background-color-main);
   border-bottom: 1px solid #ececec;
 }
-.container-header {
+.header__container {
   display: flex;
   align-items: center;
 }
@@ -10,26 +10,19 @@
   display: flex;
   align-items: center;
 }
-.header-logo {
-  font-family: "Raleway", sans-serif;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
-  letter-spacing: 0.03em;
+.header__logo {
   color: var(--logo-color-one);
+  margin-right: 93px;
 }
-.web-logo {
-  color: var(--logo-color-two);
-}
-.site-nav-list {
+
+.site-nav {
   display: flex;
-  margin-left: 93px;
   .item:not(:last-child) {
     margin-right: 50px;
   }
 }
 
-.header-link {
+.site-nav__link {
   padding: 32px 0;
   display: block;
   font-weight: 500;
@@ -43,7 +36,7 @@
   }
 }
 
-.header-link-active {
+.site-nav__link--active {
   position: relative;
   color: var(--active-page-color);
   &::after {
@@ -58,7 +51,11 @@
   }
 }
 
-.link-contacts-header {
+.header__contact-box {
+  margin-left: auto;
+}
+
+.header-contacts__link {
   display: inline-flex;
   align-items: center;
   font-weight: 500;
@@ -66,20 +63,19 @@
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--contact-header-color);
-  margin-left: auto;
   & + & {
     margin-left: 50px;
   }
   &:hover,
   &:focus {
     color: var(--accent-color-two);
-    .contacts-header-icon {
+    .header-contacts__icon {
       fill: var(--accent-color-two);
     }
   }
 }
 
-.contacts-header-icon {
+.header-contacts__icon {
   margin-right: 10px;
   fill: var(--contact-header-color);
 }

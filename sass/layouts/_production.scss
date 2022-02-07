@@ -2,26 +2,25 @@
   padding-top: 0;
   background-color: var(--background-color-main);
 }
-.production-title {
+.production__title {
   margin-bottom: 50px;
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
 }
-.production-list {
+.production__list {
   display: flex;
   flex-wrap: wrap;
 }
-.production-item {
+.production__item {
   position: relative;
   margin-right: 30px;
   &:nth-child(3n) {
     margin-right: 0;
   }
 }
-
-.production-text {
+.production__text {
   position: absolute;
   bottom: 0;
   left: 0;

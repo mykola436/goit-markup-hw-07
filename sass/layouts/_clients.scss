@@ -1,4 +1,4 @@
-.clients-title {
+.clients__title {
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
@@ -6,12 +6,12 @@
   margin-bottom: 50px;
 }
 
-.clients-list {
+.clients__list {
   display: flex;
   flex-wrap: wrap;
   margin-top: 50px;
 }
-.clients-item {
+.clients__item {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,7 +27,7 @@
   }
 }
 
-.clients-link {
+.clients__link {
   width: 100%;
   min-height: 100%;
   display: flex;
@@ -38,11 +38,11 @@
   &:focus,
   &:hover {
     outline: 1px solid var(--accent-color-two);
-    .clients-icon {
+    .clients__icon {
       fill: var(--accent-color-two);
     }
   }
 }
-.clients-icon {
+.clients__icon {
   fill: var(--icon-color-one);
 }

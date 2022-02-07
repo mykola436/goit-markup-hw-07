@@ -1,13 +1,13 @@
-.portfolio-filter-list {
+.portfolio__filter-list {
   margin-bottom: 50px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-.item-portfolio-btn:not(:last-child) {
+.portfolio-filter__item:not(:last-child) {
   margin-right: 8px;
 }
-.portfolio-btn-filter {
+.portfolio-filter__btn {
   padding: 6px 22px;
   background: var(--btn-color-two);
   font-family: inherit;

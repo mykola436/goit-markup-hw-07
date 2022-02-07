@@ -41,7 +41,7 @@
   visibility: hidden;
   pointer-events: none;
 }
-.form-head {
+.modal-form__heading {
   display: block;
   margin-bottom: 12px;
   font-size: 20px;
@@ -50,12 +50,12 @@
   letter-spacing: 0.03em;
 }
 
-.form-field {
+.modal-form__field {
   position: relative;
   margin-bottom: 10px;
 }
 
-.form-label {
+.modal-form__label {
   display: block;
   margin-bottom: 4px;
   font-size: 12px;
@@ -64,7 +64,7 @@
   color: var(--paragraph-color);
 }
 
-.form-field-input {
+.modal-form__input {
   width: 100%;
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -78,13 +78,13 @@
   color: var(--paragraph-color);
   &:focus {
     border-color: var(--accent-color-two);
-    & + .form-field-icon {
+    & + .modal-form__icon {
       fill: var(--accent-color-two);
     }
   }
 }
 
-.form-field-icon {
+.modal-form__icon {
   position: absolute;
   top: 50%;
   left: 12px;
@@ -93,7 +93,7 @@
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-comment {
+.modal-form__comment {
   width: 100%;
   height: 120px;
   padding: 12px 16px;
@@ -120,14 +120,14 @@
   }
 }
 
-.form-check {
+.modal-form__check {
   margin-bottom: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.form-check-label {
+.check__label {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
@@ -161,25 +161,25 @@
   }
 }
 
-.check-icon {
+.check__icon {
   fill: transparent;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-check-input:checked {
-  & + .form-check-label {
+.check__input:checked {
+  & + .check__label {
     > span {
       border: none;
       background-color: var(--accent-color-two);
     }
-    .check-icon {
+    .check__icon {
       fill: var(--icon-color-two);
     }
   }
 }
 
-.form-btn {
+.modal-form__btn {
   margin: 0 auto;
   padding: 10px 55px;
   display: flex;
