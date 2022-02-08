@@ -405,7 +405,7 @@ p,
   background-color: var(--accent-color-two);
 }
 
-.team__social-link:hover .team-social-icon, .team__social-link:focus .team-social-icon {
+.team__social-link:hover .team__social-icon, .team__social-link:focus .team__social-icon {
   fill: #ffffff;
 }
 
