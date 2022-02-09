@@ -218,7 +218,7 @@ p,
 }
 
 .header-contacts__link + .header-contacts__link {
-  margin-left: 50px;
+  margin-left: 30px;
 }
 
 .header-contacts__link:hover, .header-contacts__link:focus {
@@ -480,11 +480,6 @@ p,
 .footer__logo {
   display: block;
   margin-bottom: 20px;
-  font-family: "Raleway", sans-serif;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
-  letter-spacing: 0.03em;
   color: var(--logo-color-three);
 }
 
